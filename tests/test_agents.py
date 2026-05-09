@@ -1,7 +1,7 @@
 import pytest
 
-from flowpilot.config import Config
-from flowpilot.agents import PlannerAgent, CoderAgent, ReviewerAgent, TesterAgent
+from agentforge.config import Config
+from agentforge.agents import PlannerAgent, CoderAgent, ReviewerAgent, TesterAgent
 
 
 @pytest.mark.parametrize("agent_cls", [PlannerAgent, CoderAgent, ReviewerAgent, TesterAgent])

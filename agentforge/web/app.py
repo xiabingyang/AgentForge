@@ -1,4 +1,4 @@
-"""FlowPilot Web UI — Streamlit application."""
+"""AgentForge Web UI — Streamlit application."""
 
 from __future__ import annotations
 
@@ -8,9 +8,9 @@ import sys
 import streamlit as st
 
 # Ensure project root is on path when running directly
-from flowpilot.config import Config
-from flowpilot.rag import DocumentLoader, Retriever
-from flowpilot.orchestrator import DevFlow
+from agentforge.config import Config
+from agentforge.rag import DocumentLoader, Retriever
+from agentforge.orchestrator import DevFlow
 
 
 def get_config() -> Config:
@@ -150,8 +150,8 @@ def render_chat():
 
 
 def main():
-    st.set_page_config(page_title="FlowPilot", page_icon="🚀", layout="wide")
-    st.title("FlowPilot")
+    st.set_page_config(page_title="AgentForge", page_icon="🚀", layout="wide")
+    st.title("AgentForge")
     st.caption("Multi-Agent Development Workflow")
 
     init_session()

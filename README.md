@@ -1,4 +1,4 @@
-# FlowPilot
+# AgentForge
 
 基于多 Agent 协作的智能开发工作流框架，支持任意 OpenAI 兼容 API（OpenAI、MiMo、DeepSeek 等）。
 
@@ -61,7 +61,7 @@ cp .env.example .env
 ### 启动 Web 界面
 
 ```bash
-streamlit run flowpilot/web/app.py
+streamlit run agentforge/web/app.py
 ```
 
 Web 界面支持：
@@ -74,20 +74,20 @@ Web 界面支持：
 
 ```bash
 # 完整开发流程（规划 → 编码 → 审查 → 修复 → 测试）
-python -m flowpilot "实现一个带邮箱验证的用户注册 API"
+python -m agentforge "实现一个带邮箱验证的用户注册 API"
 
 # 仅代码审查
-python -m flowpilot --mode review --file path/to/code.py
+python -m agentforge --mode review --file path/to/code.py
 
 # 仅生成开发计划
-python -m flowpilot --mode plan "构建一个博客系统"
+python -m agentforge --mode plan "构建一个博客系统"
 ```
 
 ### 代码调用
 
 ```python
 import asyncio
-from flowpilot import DevFlow
+from agentforge import DevFlow
 
 async def main():
     flow = DevFlow()
@@ -101,7 +101,7 @@ asyncio.run(main())
 
 ```python
 import asyncio
-from flowpilot import DevFlow, Retriever
+from agentforge import DevFlow, Retriever
 
 async def main():
     retriever = Retriever()
@@ -118,7 +118,7 @@ asyncio.run(main())
 ### 自定义工具
 
 ```python
-from flowpilot.tools import ToolDefinition, ToolParameter, registry
+from agentforge.tools import ToolDefinition, ToolParameter, registry
 
 registry.register(ToolDefinition(
     name="my_tool",
@@ -153,7 +153,7 @@ LLM_BASE_URL=https://api.deepseek.com/v1 LLM_MODEL=deepseek-chat
 ## 项目结构
 
 ```
-flowpilot/
+agentforge/
 ├── __init__.py          # 公开 API
 ├── __main__.py          # CLI 入口
 ├── config.py            # 配置管理

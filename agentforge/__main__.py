@@ -11,7 +11,7 @@ console = Console()
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="flowpilot",
+        prog="agentforge",
         description="Multi-agent development workflow powered by LLM",
     )
     parser.add_argument("requirement", help="需求描述")
@@ -44,7 +44,7 @@ def main():
     try:
         result = asyncio.run(flow.run(args.requirement, mode=args.mode))
         console.print("\n")
-        console.rule("[bold blue]FlowPilot Result")
+        console.rule("[bold blue]AgentForge Result")
         console.print(result.report)
     finally:
         asyncio.run(flow.close())

@@ -2,7 +2,7 @@
 
 import asyncio
 
-from flowpilot import DevFlow
+from agentforge import DevFlow
 
 
 async def main():

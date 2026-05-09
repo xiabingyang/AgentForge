@@ -1,10 +1,10 @@
 import pytest
 
-from flowpilot.config import Config
-from flowpilot.tools.registry import ToolDefinition, ToolParameter, ToolRegistry
-from flowpilot.tools.file_ops import read_file, write_file, list_directory
-from flowpilot.tools.code_analysis import analyze_python, count_lines
-from flowpilot.tools.shell import run_command
+from agentforge.config import Config
+from agentforge.tools.registry import ToolDefinition, ToolParameter, ToolRegistry
+from agentforge.tools.file_ops import read_file, write_file, list_directory
+from agentforge.tools.code_analysis import analyze_python, count_lines
+from agentforge.tools.shell import run_command
 
 
 def test_tool_definition_spec():

@@ -1,8 +1,8 @@
 import pytest
 
-from flowpilot.rag.document import DocumentLoader
-from flowpilot.rag.chunker import chunk_by_chars, chunk_by_paragraph
-from flowpilot.rag.vectorstore import VectorStore
+from agentforge.rag.document import DocumentLoader
+from agentforge.rag.chunker import chunk_by_chars, chunk_by_paragraph
+from agentforge.rag.vectorstore import VectorStore
 import numpy as np
 
 

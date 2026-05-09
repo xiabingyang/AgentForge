@@ -1,7 +1,7 @@
 import pytest
 
-from flowpilot.config import Config
-from flowpilot.client import LLMClient
+from agentforge.config import Config
+from agentforge.client import LLMClient
 
 
 def test_config_defaults():
